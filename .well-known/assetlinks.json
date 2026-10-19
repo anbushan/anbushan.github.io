@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.anbuapp.play2048merge.debug",
+      "sha256_cert_fingerprints": ["94:55:AB:C3:E9:21:0A:D2:12:20:41:F4:81:B7:4D:A4:2F:CF:AC:C9:39:C4:73:31:A8:4A:06:03:7F:0E:10:8A"]
+    }
+  }
+]
