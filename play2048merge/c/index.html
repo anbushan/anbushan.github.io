@@ -46,15 +46,32 @@
 <script>
   (function () {
     var PKG = 'com.anbuapp.play2048merge';
-    var STORE = 'https://play.google.com/store/apps/details?id=' + PKG;
     var q = new URLSearchParams(location.search);
     var seed = parseInt(q.get('seed'), 10);
     var n = parseInt(q.get('n'), 10);
+    var r = parseInt(q.get('r'), 10);
     var s = parseInt(q.get('s'), 10);
-    var valid = !isNaN(seed) && n >= 4 && n <= 6;
+    var c = q.get('c');
+    var valid = !isNaN(seed) && n >= 3 && n <= 8;
+    var rows = r >= 3 && r <= 9 ? r : n;
+
+    // The board's own query, passed to the app (installed) or through Google Play's install referrer (new install),
+    // so a friend who installs first still lands on this board and both players get their invite coins.
+    var board = '';
+    if (valid) {
+      board = 'seed=' + seed + '&n=' + n + '&r=' + (r > 0 ? r : 0) + '&s=' + (s > 0 ? s : 0);
+      if (c && /^[a-z0-9]{6,20}$/.test(c)) board += '&c=' + c;
+    }
+    var STORE = 'https://play.google.com/store/apps/details?id=' + PKG + (board ? '&referrer=' + encodeURIComponent(board) : '');
+    document.getElementById('get').href = STORE;
 
     if (valid) {
-      document.getElementById('sub').textContent = 'Same ' + n + '×' + n + ' board, same tiles. Can you score higher?';
+      if (s > 0) {
+        document.getElementById('sub').textContent = 'Same ' + n + '×' + rows + ' board, same tiles. Can you score higher?';
+      } else {
+        document.getElementById('title').textContent = "You're invited!";
+        document.getElementById('sub').textContent = 'Your friend wants you to play 2048 Merge. Install from this page and you both get free coins.';
+      }
       if (s > 0) {
         document.getElementById('score').textContent = s.toLocaleString('en');
         document.getElementById('scoreBox').hidden = false;
@@ -65,7 +82,7 @@
     var android = /Android/i.test(navigator.userAgent);
     if (valid && android) {
       // Opens the app when installed; otherwise Chrome falls back to the Play Store.
-      var path = 'anbushan.github.io/play2048merge/c?seed=' + seed + '&n=' + n + '&s=' + (s > 0 ? s : 0);
+      var path = 'anbushan.github.io/play2048merge/c?' + board;
       open.href = 'intent://' + path + '#Intent;scheme=https;package=' + PKG +
         ';S.browser_fallback_url=' + encodeURIComponent(STORE) + ';end';
     } else {
