@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillPannu – Privacy Policy</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; line-height: 1.6; color: #16161A; background: #FFFFFF; }
+  h1 { font-size: 28px; } h2 { font-size: 20px; margin-top: 32px; }
+  a { color: #1D4ED8; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid #E5E7EB; }
+  @media (prefers-color-scheme: dark) { body { background: #0E0E11; color: #EDEDF0; } a { color: #7EA6FF; } th, td { border-color: #2A2A31; } }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p><em>Last updated: 11 November 2026</em></p>
+
+<p>BillPannu ("the app", "we") is an Android billing, stock and accounts app for shops and small businesses, developed by <strong>Anbushan</strong>. This policy explains what the app does with your information. In short: your bills, items, customers, suppliers and accounts are stored on your phone, encrypted. We do not run servers that receive your business data, and the app has no accounts or sign-up.</p>
+
+<h2>1. Your business data</h2>
+<ul>
+  <li><strong>Stored on your phone.</strong> Shop details, bills, quotations, items, stock, customers, suppliers, payments, expenses, staff names and reports are kept in a database inside the app. The database is encrypted (SQLCipher) with a key held in the Android Keystore. Other apps cannot read it.</li>
+  <li><strong>Customer and supplier details.</strong> Names, phone numbers, addresses, GSTINs, balances, birthdays and other details you enter about your customers and suppliers stay on your phone. You, as the business, are responsible for collecting them fairly and for how you use them.</li>
+  <li><strong>Pictures.</strong> A shop logo or signature you add is copied into the app's private storage. Bill and receipt photos you scan are read on the phone and not uploaded.</li>
+  <li><strong>App lock.</strong> If you set a PIN or fingerprint lock, the PIN is stored only as a hash on your phone; fingerprints are handled by Android and never seen by the app.</li>
+  <li><strong>Sharing.</strong> When you share a bill, statement, report, poster or GST file, or send a reminder by WhatsApp or SMS, the file or message is handed to the app you choose (for example WhatsApp, Gmail or your SMS app). From then on, that app's own privacy policy applies. The app never sends messages by itself.</li>
+  <li><strong>Exports.</strong> GST (GSTR-1, GSTR-3B), Tally, e-invoice, e-way bill, Excel and PDF files are created on your phone and go only where you send or save them.</li>
+</ul>
+
+<h2>2. Backup to Google Drive (optional)</h2>
+<p>If you turn on backup, you sign in with your Google account and the app saves an encrypted copy of its database to the hidden app folder of <em>your own</em> Google Drive (the <code>drive.appdata</code> permission, which can see only BillPannu's own backup files, not your other Drive files). We cannot see these backups. You can delete them in Google Drive → Settings → Manage apps → BillPannu → Delete hidden app data, and you can sign out of backup in the app at any time.</p>
+
+<h2>3. On-device features</h2>
+<ul>
+  <li><strong>Barcode scanning and reading bill photos</strong> use Google ML Kit on the phone. Google Play services may download the ML Kit models and may collect anonymous diagnostics about them; your pictures are not sent. See the <a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a>.</li>
+  <li><strong>Voice billing</strong> uses your phone's speech recognition service (usually Google). While you speak, that service may process the audio as described by its provider. The app receives only the recognised text.</li>
+  <li><strong>Printers, scales and scanners</strong> connect over Bluetooth, USB or your local Wi-Fi network. Bill data is sent only to the device you choose.</li>
+  <li><strong>Reminders</strong> (payment due, low stock, expiry, birthdays, backups) are worked out on the phone and shown as notifications.</li>
+</ul>
+
+<h2>4. Information collected by third-party services</h2>
+<p>The app uses the following Google services. They may collect information as described below and in <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from apps that use its services</a>.</p>
+<table>
+  <tr><th>Service</th><th>What it may collect</th><th>Why</th></tr>
+  <tr><td>Google AdMob</td><td>Advertising ID, IP address, device information, ad interactions</td><td>To show and measure the banner ads that keep the app free. Where the law requires (for example the EEA, the UK and Switzerland) you are asked for consent before ads are requested, and you can change your choice in More → Ad privacy choices.</td></tr>
+  <tr><td>Firebase Crashlytics (only if you allow crash reports)</td><td>Crash reports: the state of the app when it crashed, device model, OS version, an app-instance ID</td><td>To find and fix crashes. Off until you allow it in the app; reports never include your bills, customers or other business data.</td></tr>
+  <tr><td>Google Sign-In and Google Drive (only if you turn on backup)</td><td>Your Google account email, to connect to your Drive</td><td>To save and restore your encrypted backup.</td></tr>
+  <tr><td>Google Play (in-app review)</td><td>Information handled by Google Play</td><td>To let you rate the app. We never see who rated or what they wrote unless it is posted publicly.</td></tr>
+</table>
+<p>Information collected by these services is encrypted in transit. You can reset or delete your Advertising ID in Android settings → Privacy → Ads.</p>
+<p>We do not sell your information, and we do not share it with anyone other than the services listed above.</p>
+
+<h2>5. Permissions</h2>
+<ul>
+  <li><strong>Camera</strong> (optional) – to scan barcodes and read bill or receipt photos.</li>
+  <li><strong>Microphone</strong> (optional) – only while you use voice billing.</li>
+  <li><strong>Nearby devices / Bluetooth</strong> (optional) – to connect Bluetooth printers and weighing scales. It is never used to find your location.</li>
+  <li><strong>Notifications</strong> (Android 13+, optional) – payment, stock, expiry and backup reminders.</li>
+  <li><strong>Biometric</strong> (optional) – fingerprint unlock for the app lock.</li>
+  <li><strong>Internet</strong> – for ads, optional Google Drive backup, optional crash reports and opening links. Billing works fully offline.</li>
+</ul>
+
+<h2>6. Your choices and deleting data</h2>
+<ul>
+  <li>Remove camera, microphone, Bluetooth or notification access at any time in Android settings.</li>
+  <li>Delete items, customers, suppliers and expenses in the app. Bills can be cancelled (GST rules need bill numbers to stay in sequence).</li>
+  <li>Uninstalling the app, or clearing its storage in Android settings, deletes everything it stored on the phone. Files you shared or saved elsewhere (PDFs, Excel, backups in your Drive) stay until you delete them.</li>
+  <li>To ask us to delete crash data linked to your app-instance ID, email us at the address below.</li>
+</ul>
+
+<h2>7. Children</h2>
+<p>The app is meant for businesses and is not directed to children under 13. We do not knowingly collect information from children.</p>
+
+<h2>8. Not affiliated</h2>
+<p>BillPannu is an independent app. It is not affiliated with, endorsed by, or sponsored by the Goods and Services Tax Network (GSTN), the Government of India, Tally Solutions, Google, WhatsApp or any other service it works with. Their names are used only to describe compatibility. GST and e-invoice files made by the app should be checked on the official portal before filing.</p>
+
+<h2>9. Changes</h2>
+<p>We may update this policy when the app changes. The date at the top shows the latest version.</p>
+
+<h2>10. Contact</h2>
+<p>Anbushan – <a href="mailto:anbushanthi001@gmail.com">anbushanthi001@gmail.com</a></p>
+
+<p><a href="terms.html">Terms &amp; Conditions</a> · <a href="./">BillPannu</a></p>
+</body>
+</html>
